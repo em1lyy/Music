@@ -40,12 +40,12 @@ RESOURCES += \
     music_resources.qrc
 
 music.path = /usr/share/Music
-music.files += Music/Music
-music.files += Music/Music.desktop
-music.files += Music/nocover.png
+music.files += Music
+music.files += Music.desktop
+music.files += nocover.png
 
 desktop.path = /usr/share/applications
-desktop.files += Music/Music.desktop
+desktop.files += Music.desktop
 
 INSTALLS += \
     music \
