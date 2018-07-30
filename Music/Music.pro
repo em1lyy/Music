@@ -38,3 +38,9 @@ DISTFILES += \
 
 RESOURCES += \
     music_resources.qrc
+
+music.path = /usr/bin/
+music.files = Music
+
+INSTALLS += \
+    music
