@@ -48,5 +48,5 @@ desktop.path = /usr/share/applications
 desktop.files += Music/Music.desktop
 
 INSTALLS += \
-    music
+    music \
     desktop
