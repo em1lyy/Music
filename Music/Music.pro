@@ -39,8 +39,14 @@ DISTFILES += \
 RESOURCES += \
     music_resources.qrc
 
-music.path = /usr/bin/
-music.files = Music
+music.path = /usr/share/Music
+music.files += Music/Music
+music.files += Music/Music.desktop
+music.files += Music/nocover.png
+
+desktop.path = /usr/share/applications
+desktop.files += Music/Music.desktop
 
 INSTALLS += \
     music
+    desktop
