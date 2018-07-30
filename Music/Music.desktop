@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Music
+GenericName=Music Player
+GenericName[de]=Musikplayer
+Comment=Play Audio files
+Comment[de]=Audio-Dateien wiedergeben
+
+Icon=multimedia-player
+
+Type=Application
+Categories=AudioVideo;Audio;
+
+Exec=/usr/share/Music/Music
+StartupNotify=false
+Terminal=false
+MimeType=audio/aac;audio/ac3;audio/x-ms-wma;video/mpeg;audio/flac;audio/x-flac;audio/mpeg;audio/basic;audio/x-aiff;audio/x-wav;application/ogg;audio/x-vorbis+ogg;
