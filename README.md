@@ -12,4 +12,4 @@ The default music player for JaguOS
 `$ make`  
 5. Install the software (root permissions required!)  
 `$ sudo make install`  
-Good! The Software is now built into the Music executable!  
+Good! The Software is now built and executable!  
