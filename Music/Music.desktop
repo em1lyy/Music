@@ -8,7 +8,7 @@ Comment[de]=Audio-Dateien wiedergeben
 Icon=multimedia-player
 
 Type=Application
-Categories=AudioVideo;Audio;
+Categories=Qt;AudioVideo;Audio;
 
 Exec=/usr/share/Music/Music
 StartupNotify=false
