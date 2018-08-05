@@ -15,12 +15,12 @@ validpgpkeys=()
 
 
 build() {
-	cd "$pkgname-$pkgver/Music-$pkgver/Music"
+	cd "$srcdir/Music-$pkgver/Music"
 	qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
 	make
 }
 
 package() {
-	cd "$pkgname-$pkgver/Music-$pkgver/Music"
+	cd "$srcdir/Music-$pkgver/Music"
 	make INSTALL_ROOT="$pkgdir" install
 }
