@@ -9,6 +9,7 @@ QT       += core gui multimedia multimediawidgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Music
+TARGET.path = $$PREFIX/
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -39,14 +40,18 @@ DISTFILES += \
 RESOURCES += \
     music_resources.qrc
 
-music.path = /usr/share/Music
+music.path = $$PREFIX/usr/share/Music
 music.files += Music
 music.files += Music.desktop
 music.files += nocover.png
 
-desktop.path = /usr/share/applications
+desktop.path = $$PREFIX/usr/share/applications
 desktop.files += Music.desktop
+
+pixmap.path = $$PREFIX/usr/share/pixmaps
+pixmap.files += nocover.png
 
 INSTALLS += \
     music \
-    desktop
+    desktop \
+    pixmap
