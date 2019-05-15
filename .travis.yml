@@ -4,8 +4,24 @@ dist: xenial
 compiler: gcc
 
 install:
-  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5  
+  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5 qtbase5-dev-tools qt5-qmake
 script:
   - cd Music/
   - /usr/bin/qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
   - make
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
+
+notifications:
+  email:
+    recipients:
+      - jonasjaguar@jagudev.net
+    on_success: always
+    on_failure: always
