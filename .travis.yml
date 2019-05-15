@@ -2,12 +2,19 @@ language: cpp
 os: linux
 dist: xenial
 compiler: gcc
+sudo: required
+
+before_install:
+  - sudo add-apt-repository ppa:beineri/opt-qt-5.12.0-xenial
+  - sudo apt-get update
 
 install:
-  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5 qtbase5-dev-tools qt5-qmake
+  - sudo apt-get install qt512base qt512multimedia qt512imageformats qt512translations 
+  - source /opt/qt512/bin/qt512-env.sh
+
 script:
   - cd Music/
-  - /usr/bin/qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
+  - /opt/qt512/bin/qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
   - make
 
 after_success:
