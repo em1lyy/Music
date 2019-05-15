@@ -4,8 +4,7 @@ dist: xenial
 compiler: gcc
 
 install:
-  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev
-  
+  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5  
 script:
   - cd Music/
   - qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
