@@ -11,9 +11,6 @@ before_install:
 install:
   - sudo apt-get install qt512base qt512multimedia qt512imageformats qt512translations libpulse-dev libgl1-mesa-dev libgl1-mesa-glx -y
   - source /opt/qt512/bin/qt512-env.sh
-  - sudo ln -s /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1 /usr/lib/x86_64-linux-gnu/mesa/libGL.so
-  - sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/mesa/libGL.so
-  - sudo ldconfig
 
 script:
   - cd Music/
