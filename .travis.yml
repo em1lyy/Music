@@ -1,9 +1,10 @@
 language: cpp
 os: linux
 dist: xenial
+compiler: gcc
 
 install:
-  - sudo apt-get install -y qtbase5-dev
+  - sudo apt-get install -y qtbase5-dev qtmultimedia5-dev
   
 script:
   - cd Music/
