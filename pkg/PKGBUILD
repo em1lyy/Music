@@ -1,6 +1,6 @@
 # Maintainer: Jonas Jaguar <jonasjaguar@jagudev.net>
 pkgname=jagudev-music
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="The default music player for JaguOS"
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=(qt5-base qt5-multimedia)
 makedepends=(gcc make)
 options=()
 source=("https://github.com/jonasjaguar/Music/archive/$pkgver.tar.gz")   
-md5sums=('53c5b6afba50400042665b5ca2a5b02d')
+md5sums=('SKIP')
 validpgpkeys=()
 
 
