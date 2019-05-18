@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get update
 
 install:
-  - sudo apt-get install qt512base qt512multimedia qt512imageformats qt512translations libpulse-dev libgl1-mesa-dev libgl1-mesa-glx -y
+  - sudo apt-get install qt512base qt512multimedia qt512imageformats qt512translations libpulse-dev libgl1-mesa-dev libgl1-mesa-glx fakeroot -y
   - source /opt/qt512/bin/qt512-env.sh
 
 script:
