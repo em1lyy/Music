@@ -25,7 +25,7 @@ prepare() {
 
 build() {
 	cd "$srcdir/Music-$pkgver/Music"
-	qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
+	/opt/qt512/bin/qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
 	make
 }
 
