@@ -21,10 +21,32 @@ after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
   - ./send.sh success $WEBHOOK_URL
+  
 after_failure:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
   - ./send.sh failure $WEBHOOK_URL
+
+before_deploy:
+  - cd pkg/
+  - wget https://gist.githubusercontent.com/jonasjaguar/726b710b1d6044e57c6faa8a11680334/raw/67f29f7adaf4d2656f2020e2389143541dce3111/makdeb
+  - chmod +x makdeb
+  - ./makedeb
+  - DEBNAME=$(find . -name jagudev-music_*)
+  - cp $DEBNAME ../jagudev-music_current.deb
+  - cd ..
+
+deploy:
+  provider: releases
+  api_key:
+    secure: MqtwDjdql/bpu+a2XC7Pr8jN3OOzanhaq1jIcHCsZ9wdzSkeheKF+KWOqLgPx4cO1nkdSr2fy3Dbv4/lXwKuzdGJr5FV9waudcXtyAyQD5wMJ4RYXFHihFG5gCBVAIf+5bBJdPN6fkKGKUCwlu3xlyAYwf8zcDzGrXlKvdpLjNZVVTGoaoqxbjh8b9xW9wmnLlzA8tRzTuvQQrHuHKROVCGSNcBB/WplgZqRTKyiXxqBij0rtgwV5dgmKimyIYsMCsGxs7yRJ1tAfAzbzMWe7YXDaGj1F7d/MYKhru4bHklUxjw02mUpsbtzxp+yR61Z77YAWLaHscA6RApEuXz4sDrFh7JUra2Fzz9c+hfJzRPlf49dBVcmB7B4zOyF7bxvX3r/BIZ0pFFJihfRpbqrzB/1Mp0wP854EfBSCB/73giYHmv7A1HR+YIrNlIkBnszuKyoxm7vt4ybstVNgaf2EYzqNz+BIzQgjF1eFhudNj8giDGsL4GzsEozqM0sHf7Kt+8szvZrjbZwl4coTJSvzFR9MiszLKungbRm1Pn3FiDjzUrjen12syK8ruaTpi4owLf3Myth2mttkUlkiPq1wO8NUFsq/poebIFUjVCb4s3D8yX1OHG9jwCgWxMzM9ivsHR1Kh2CxXK/FFgZX++i1P5vQq3X+eMcghqzF/SBihA=
+  file:
+    - jagudev-music_current.deb
+    - Music
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: jonasjaguar/Music
 
 notifications:
   email:
