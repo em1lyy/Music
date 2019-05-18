@@ -1,0 +1,40 @@
+maintainer="Jonas Jaguar <jonasjaguar@jagudev.net>"
+pkgname=jagudev-music
+pkgver=1.0
+pkgrel=1
+distribution="unstable"
+urgency="medium"
+pkgdesc="A simple music player, made with Qt5\nOriginally intended for JaguOS, now for everyone, on every distro."
+section="misc"
+priority="optional"
+arch=('all')
+url="https://jagudev.net"
+depends=('libqt5multimedia5' 'qt5-default' 'libqt5multimediawidgets5')
+builddepends=('gcc' 'make')
+recommends=()
+suggests=()
+provides=()
+breaks=()
+conflicts=()
+replaces=()
+source=("https://github.com/jonasjaguar/Music/archive/$pkgver.tar.gz")
+
+prepare() {
+	echo "No preparation needed"
+}
+
+build() {
+	cd "$srcdir/Music-$pkgver/Music"
+	qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
+	make
+}
+
+check() {
+	echo "Check function, not needed"
+}
+
+package() {
+	cd "$srcdir/Music-$pkgver/Music"
+	make INSTALL_ROOT="$pkgdir" install
+}
+ 
