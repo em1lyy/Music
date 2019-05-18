@@ -44,7 +44,6 @@ deploy:
     secure: MqtwDjdql/bpu+a2XC7Pr8jN3OOzanhaq1jIcHCsZ9wdzSkeheKF+KWOqLgPx4cO1nkdSr2fy3Dbv4/lXwKuzdGJr5FV9waudcXtyAyQD5wMJ4RYXFHihFG5gCBVAIf+5bBJdPN6fkKGKUCwlu3xlyAYwf8zcDzGrXlKvdpLjNZVVTGoaoqxbjh8b9xW9wmnLlzA8tRzTuvQQrHuHKROVCGSNcBB/WplgZqRTKyiXxqBij0rtgwV5dgmKimyIYsMCsGxs7yRJ1tAfAzbzMWe7YXDaGj1F7d/MYKhru4bHklUxjw02mUpsbtzxp+yR61Z77YAWLaHscA6RApEuXz4sDrFh7JUra2Fzz9c+hfJzRPlf49dBVcmB7B4zOyF7bxvX3r/BIZ0pFFJihfRpbqrzB/1Mp0wP854EfBSCB/73giYHmv7A1HR+YIrNlIkBnszuKyoxm7vt4ybstVNgaf2EYzqNz+BIzQgjF1eFhudNj8giDGsL4GzsEozqM0sHf7Kt+8szvZrjbZwl4coTJSvzFR9MiszLKungbRm1Pn3FiDjzUrjen12syK8ruaTpi4owLf3Myth2mttkUlkiPq1wO8NUFsq/poebIFUjVCb4s3D8yX1OHG9jwCgWxMzM9ivsHR1Kh2CxXK/FFgZX++i1P5vQq3X+eMcghqzF/SBihA=
   file:
     - jagudev-music_current.deb
-    - Music
     - Music.tar.gz
   skip_cleanup: true
   on:
