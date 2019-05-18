@@ -16,18 +16,6 @@ script:
   - cd Music/
   - /opt/qt512/bin/qmake ./Music.pro -spec linux-g++ && /usr/bin/make qmake_all
   - make
-
-after_success:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh success $WEBHOOK_URL
-  
-after_failure:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh failure $WEBHOOK_URL
-
-before_deploy:
   - cd pkg/
   - wget https://gist.githubusercontent.com/jonasjaguar/726b710b1d6044e57c6faa8a11680334/raw/67f29f7adaf4d2656f2020e2389143541dce3111/makdeb
   - chmod +x makdeb
@@ -38,6 +26,16 @@ before_deploy:
   - cd Music/
   - tar cfvz ../Music.tar.gz Music Music.desktop
   - cd ..
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+  
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
 
 deploy:
   provider: releases
