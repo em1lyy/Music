@@ -31,9 +31,12 @@ before_deploy:
   - cd pkg/
   - wget https://gist.githubusercontent.com/jonasjaguar/726b710b1d6044e57c6faa8a11680334/raw/67f29f7adaf4d2656f2020e2389143541dce3111/makdeb
   - chmod +x makdeb
-  - ./makedeb
+  - sudo ./makedeb
   - DEBNAME=$(find . -name jagudev-music_*)
   - cp $DEBNAME ../jagudev-music_current.deb
+  - cd ..
+  - cd Music/
+  - tar cfvz ../Music.tar.gz Music Music.desktop
   - cd ..
 
 deploy:
@@ -43,6 +46,7 @@ deploy:
   file:
     - jagudev-music_current.deb
     - Music
+    - Music.tar.gz
   skip_cleanup: true
   on:
     tags: true
