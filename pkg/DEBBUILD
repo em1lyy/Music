@@ -1,6 +1,6 @@
 maintainer="Jonas Jaguar <jonasjaguar@jagudev.net>"
 pkgname=jagudev-music
-pkgver=1.1
+pkgver=19.06
 pkgrel=1
 distribution="unstable"
 urgency="medium"

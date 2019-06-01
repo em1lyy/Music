@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>nocover.png</file>
+        <file>de.qm</file>
+        <file>fr.qm</file>
     </qresource>
 </RCC>
