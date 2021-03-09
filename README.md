@@ -4,7 +4,7 @@ The default music player for JaguOS
 
 ## Build instructions  
 1. Clone the repository  
-`$ git clone https://github.com/jonasjaguar/Music.git`  
+`$ git clone https://github.com/em1lyy/Music.git`  
 2. Change to the directory  
 `$ cd Music/Music/`  
 3. Generate the Makefile  
