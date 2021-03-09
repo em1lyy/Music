@@ -1,5 +1,5 @@
 # Music
-[![Build Status](https://travis-ci.org/jonasjaguar/Music.svg?branch=master)](https://travis-ci.org/jonasjaguar/Music)  
+[![Build Status](https://travis-ci.com/em1lyy/Music.svg?branch=master)](https://travis-ci.com/em1lyy/Music)  
 The default music player for JaguOS  
 
 ## Build instructions  
