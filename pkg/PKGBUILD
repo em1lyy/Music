@@ -1,15 +1,15 @@
-# Maintainer: Jonas Jaguar <jonasjaguar@jagudev.net>
+# Maintainer: Emily <elishikawa@jagudev.net>
 pkgname=jagudev-music
 pkgver=19.06
 pkgrel=1
-pkgdesc="The default music player for JaguOS"
+pkgdesc="A simple music player"
 arch=('x86_64')
 url="https://jagudev.net"
 license=('GPL3')
 depends=(qt5-base qt5-multimedia)
 makedepends=(gcc make)
 options=()
-source=("https://github.com/jonasjaguar/Music/archive/$pkgver.tar.gz")   
+source=("https://github.com/em1lyy/Music/archive/$pkgver.tar.gz")   
 md5sums=('SKIP')
 validpgpkeys=()
 
