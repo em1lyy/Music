@@ -1,10 +1,10 @@
-maintainer="Jonas Jaguar <jonasjaguar@jagudev.net>"
+maintainer="Emily <elishikawa@jagudev.net>"
 pkgname=jagudev-music
 pkgver=19.06
 pkgrel=1
 distribution="unstable"
 urgency="medium"
-pkgdesc="A simple music player, made with Qt5\nOriginally intended for JaguOS, now for everyone, on every distro."
+pkgdesc="A simple music player, made with Qt5"
 section="misc"
 priority="optional"
 arch=('all')
@@ -17,7 +17,7 @@ provides=()
 breaks=()
 conflicts=()
 replaces=()
-source=("https://github.com/jonasjaguar/Music/archive/$pkgver.tar.gz")
+source=("https://github.com/em1lyy/Music/archive/$pkgver.tar.gz")
 
 prepare() {
 	echo "No preparation needed"
